@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mu Mu</title>
+    <link rel="icon" href="/image/my-icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>My Works</h1>
+        <nav>
+            <ul>
+                <li><a href="about.html" target="_blank">About</a></li>
+                <li><a href="works.html" target="_blank">Works</a></li>
+                <li><a href="contact.html" target="_blank">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="projects">
+        <article class="project" id="project1">
+            <div class="project-content">
+                <img src="image/project-01.png" alt="Lost and Found">
+                <div class="content">
+                    <h2>Lost and Found</h2>
+                    <a href="https://editor.p5js.org/muy427/full/ntBdlO7hH">View More</a>
+                </div>
+            </div>
+        </article>
+        <article class="project" id="project2">
+            <div class="project-content">
+                <img src="image/project-02.png" alt="Face Generator">
+                <div class="content">
+                    <h2>Face Generator</h2>
+                    <a href="https://editor.p5js.org/muy427/full/u87SbR7u3">View More</a>
+                </div>
+            </div>
+        </article>
+        <article class="project" id="project3">
+            <div class="project-content">
+                <img src="image/project-03.png" alt="Experimental Clock">
+                <div class="content">
+                    <h2>Experimental Clock</h2>
+                    <a href="https://editor.p5js.org/muy427/full/QBoSZodti">View More</a>
+                </div>
+            </div>
+        </article>
+        <article class="project" id="project4">
+            <div class="project-content">
+                <img src="image/project-04.png" alt="Exquisite Corpse">
+                <div class="content">
+                    <h2>Exquisite Corpse</h2>
+                    <a href="https://editor.p5js.org/muy427/full/Y1Quy83eJ">View More</a>
+                </div>
+            </div>
+        </article>
+        <article class="project" id="project5">
+            <div class="project-content">
+                <img src="image/project-05.png" alt="Optical Illusion">
+                <div class="content">
+                    <h2>Optical Illusion</h2>
+                    <a href="https://editor.p5js.org/muy427/full/l05cnpYV9">View More</a>
+                </div>
+            </div>
+        </article>
+        <article class="project" id="project6">
+            <div class="project-content">
+                <img src="image/project-06.png" alt="Data Portrait">
+                <div class="content">
+                    <h2>Data Portrait</h2>
+                    <a href="https://editor.p5js.org/muy427/full/pPQYDKf5x">View More</a>
+                </div>
+            </div>
+        </article>
+        <article class="project" id="project7">
+            <div class="project-content">
+                <img src="image/project-07.png" alt="Autobiographical Game">
+                <div class="content">
+                    <h2>Autobiographical Game</h2>
+                    <a href="https://editor.p5js.org/muy427/full/7aaD-cIN0">View More</a>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <footer>
+        <p>© 2024 Yingjie Mu'P5.js</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const projects = document.querySelectorAll('.project');
+    
+            projects.forEach(project => {
+                project.style.backgroundColor = 'black';
+                project.querySelector('a').style.color = 'white';
+            });
+
+            projects.forEach(project => {
+                project.addEventListener('mouseover', function() {
+                    this.style.backgroundColor = 'white';
+                    this.style.color = 'black';
+                    this.querySelector('img').style.display = 'block';
+                    this.querySelector('a').style.color = 'black';
+                });
+            });
+
+            projects.forEach(project => {
+                project.addEventListener('mouseout', function() {
+                    this.style.backgroundColor = 'black';
+                    this.style.color = 'white';
+                    this.querySelector('img').style.display = 'none';
+                    this.querySelector('a').style.color = 'white';
+                });
+            });
+        });
+    </script>
+        
+</body>
+</html>
