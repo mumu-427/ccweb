@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project View</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Project Viewer</h1>
+    </header>
+
+    <div class="container">
+        <div class="sketch-container">
+            <div id="sketch-holder"></div>
+        </div>
+        <div class="description">
+            <h2 id="project-title">Project Title</h2>
+            <p id="project-description">Project description goes here...</p>
+            <a href="index.html" class="back-link">← Back to Projects</a>
+        </div>
+    </div>
+
+    <script>
+        // 获取 URL 参数来加载不同的 sketch 和描述
+        const params = new URLSearchParams(window.location.search);
+        const sketchUrl = params.get('sketch');
+        const projectTitle = params.get('title');
+        const projectDescription = params.get('desc');
+
+        // 设置标题和描述
+        document.getElementById('project-title').innerText = projectTitle;
+        document.getElementById('project-description').innerText = projectDescription;
+
+        // 动态加载 sketch.js 文件
+        if (sketchUrl) {
+            const script = document.createElement('script');
+            script.src = sketchUrl;
+            document.getElementById('sketch-holder').appendChild(script);
+        }
+    </script>
+</body>
+</html>
